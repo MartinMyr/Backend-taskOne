@@ -1,0 +1,18 @@
+body{
+    padding:0;
+    margin:0;
+    max-width:1028px;
+    margin:auto;
+    background-color:rgb(13, 13, 80);
+}
+#content{
+    text-align: center;
+}
+#buttons{
+    justify-content: space-around;
+    display:flex;
+}
+button{
+    width:150px;
+    height:50px;
+}
