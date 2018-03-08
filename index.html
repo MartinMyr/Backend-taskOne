@@ -17,12 +17,14 @@
         
         <div id = "buttons">
             <button id = "save" onclick = "addHoroscope()" >Save</button>
-            <button id = "update" onclick = "" >Update</button>
-            <button id = "delete" onclick = "" >Delete</button>
+            <button id = "update" onclick = "viewHoroscope()" >Update</button>
+            <button id = "delete" onclick = "deleteHoroscope()" >Delete</button>
         </div>
 
-        <div id = "horoscope"></div>
+        <div onload = "viewHoroscope()" id = "horoscope"></div>
     </div>  
-    
+    <script type="text/javascript">
+        viewHoroscope.swap('horoscope');
+     </script>
 </body>
 </html>

@@ -16,3 +16,11 @@ button{
     width:150px;
     height:50px;
 }
+
+#horoscope{
+    width:100px;
+    height:40px;
+    background-color:white;
+    margin-left:45%;
+    margin-top:10px;
+}

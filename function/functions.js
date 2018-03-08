@@ -28,9 +28,6 @@ function viewHoroscope(){
     $.ajax({
         url:"function/viewHoroscope.php",
         method: "GET",
-        data:{
-            "personNr": $("#socialNr").val()
-        },
         success: function(results){
             $("#horoscope").html(results);
         }

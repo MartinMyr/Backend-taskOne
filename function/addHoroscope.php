@@ -4,18 +4,24 @@
 ?>   
 
 <?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        //print_r($_POST);
-        $date = substr($_POST["socialNr"], -4, 4);
+    session_start();
 
-        $person = new Person($date);
-        if($_SESSION["horoscope"] == NULL){
-            $_SESSION["horoscope"] = $person->horoscope;
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
+        $date = substr($_POST["socialNr"], -4, 4);
+        if($_POST["socialNr"] == NULL){
+            echo "Input field empty";
         }else{
-?> 
-        <script type="text/javascript">alert("Horoscope " + "'<?php echo $_SESSION["horoscope"] ?>''" + " already set ")</script>
-<?php
+            $person = new Person($date);
+            if($_SESSION["horoscope"] == NULL){
+                $_SESSION["horoscope"] = $person->horoscope;
+                echo "Horoscope set";
+            }else{
+                ?> 
+                <script type="text/javascript">alert("Horoscope " + "'<?php echo $_SESSION["horoscope"] ?>''" + " already set ")</script>
+                <?php
+            }
         }
+        
     }
 
 
