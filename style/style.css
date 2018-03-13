@@ -3,7 +3,12 @@ body{
     margin:0;
     max-width:1028px;
     margin:auto;
-    background-color:rgb(13, 13, 80);
+    background-image: url("../pic/bg.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 #content{
     text-align: center;
@@ -17,9 +22,9 @@ button{
     height:50px;
 }
 
-#horoscope{
+#action{
     width:100px;
-    height:40px;
+    height:50px;
     background-color:white;
     margin-left:45%;
     margin-top:10px;

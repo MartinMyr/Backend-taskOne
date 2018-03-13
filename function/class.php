@@ -4,8 +4,9 @@
         public $horoscope;
         function __construct($date){
             $this->date = $date;
-
-            if($date >= '0321' && $date <= '0420'){  
+            if($date <4){
+                echo "Please enter a valid number";
+            }elseif($date >= '0321' && $date <= '0420'){  
                 $this->horoscope = "Väduren";
             }elseif($date >= '0421' && $date <= '0521'){
                 $this->horoscope = "Oxe";
@@ -30,6 +31,7 @@
             }elseif($date >= '0219' && $date <= '0320'){
                 $this->horoscope = "Fisk";
             }
+            
         }
         
         public function printSign($date){

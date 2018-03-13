@@ -6,7 +6,9 @@ function addHoroscope(){
             "socialNr": $("#socialNr").val()
         },
         success: function(results){
-            $("#horoscope").html(results);
+            viewHoroscope();
+            $("#action").html(results);
+            
         }
     });
 }
@@ -16,10 +18,12 @@ function updateHoroscope(){
         url:"function/updateHoroscope.php",
         method: "PUT",
         data:{
-            "personNr": $("#socialNr").val()
+            "socialNr": $("#socialNr").val(),
+            
         },
         success: function(results){
-            $("#horoscope").html(results);
+            viewHoroscope();
+            $("#action").html(results);
         }
     });
 }
@@ -42,7 +46,9 @@ function deleteHoroscope(){
             "personNr": $("#socialNr").val()
         },
         success: function(results){
-            $("#horoscope").html(results);
+            viewHoroscope();
+            $("#action").html(results);
+            $("#save").show();
         }
     });
 }
