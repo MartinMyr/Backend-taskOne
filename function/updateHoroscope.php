@@ -18,7 +18,6 @@
                     $_SESSION["horoscope"] = $person->horoscope;
                     $_SESSION["horoscopeSet"] = 1 ;
                     echo "Horoscope updated";
-            
                 }    
             }
     }

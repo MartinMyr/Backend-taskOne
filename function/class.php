@@ -1,10 +1,11 @@
 <?php
+    session_start();
 
     class Person{
         public $horoscope;
         function __construct($date){
             $this->date = $date;
-            if($date <4){
+            if($date < 6){
                 echo "Please enter a valid number";
             }elseif($date >= '0321' && $date <= '0420'){  
                 $this->horoscope = "Väduren";
@@ -30,6 +31,8 @@
                 $this->horoscope = "Vattuman";
             }elseif($date >= '0219' && $date <= '0320'){
                 $this->horoscope = "Fisk";
+            }else{
+                echo "Please enter a valid number"; 
             }
             
         }
