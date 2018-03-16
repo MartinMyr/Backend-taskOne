@@ -4,7 +4,6 @@
 ?>   
 
 <?php
-    $date = substr($_POST["socialNr"], -4, 4);
    
    
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -17,15 +16,13 @@
             <script type="text/javascript">alert("Horoscope " + "'<?php echo $_SESSION["horoscope"] ?>''" + " already set ")</script>
             <?php
    
+        }elseif($_SESSION["horoscope"] == NULL && $person->horoscope !== false){
+            $_SESSION["horoscope"] = $person->horoscope;
+            $_SESSION["horoscopeSet"] = 1;
+            echo "Horoscope set";
         }else{
-            $person = new Person($date);
-            if($_SESSION["horoscope"] == NULL){
-                $_SESSION["horoscope"] = $person->horoscope;
-                $_SESSION["horoscopeSet"] = 1 ;
-                echo "Horoscope set";
-            }else{
-               
-            }
+        echo "This is not a valid date! :/";   
+            
         }
         
     }

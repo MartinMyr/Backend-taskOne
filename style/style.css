@@ -3,7 +3,7 @@ body{
     margin:0;
     max-width:1028px;
     margin:auto;
-    background-image: url("../pic/bg.png");
+    background: url("../pic/bg.png"); 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -30,7 +30,7 @@ button:hover{
 #action{
     width:100px;
     height:50px;
-    background-color:white;
+    background-color:rgba(255, 255, 255, 0.493);
     margin-left:45%;
     margin-top:10px;
 }
@@ -38,5 +38,6 @@ button:hover{
     width:80px;
     height:20px;
     margin-left:46%;
-    background-color:white;
+    margin-top: 10px;
+    background-color:rgba(255, 255, 255, 0.432);
 }

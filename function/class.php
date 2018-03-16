@@ -1,14 +1,23 @@
 <?php
-    session_start();
-
+     if($_SERVER['REQUEST_METHOD'] == 'PUT'){
+        $date = substr($_PUT["socialNr"], -4,4);
+     }else{
+        $date = substr($_POST["socialNr"], -4, 4);
+     }
+         
+    
+    
+    
     class Person{
         public $horoscope;
+        public $horPic;
         function __construct($date){
             $this->date = $date;
-            if($date < 6){
-                echo "Please enter a valid number";
+            if(strlen($date) < 4){
+               $this->horoscope = false; 
             }elseif($date >= '0321' && $date <= '0420'){  
                 $this->horoscope = "Väduren";
+                $this->horPic = "../pic/vadur.jpg";
             }elseif($date >= '0421' && $date <= '0521'){
                 $this->horoscope = "Oxe";
             }elseif($date >= '0522' && $date <= '0621'){
@@ -25,24 +34,30 @@
                 $this->horoscope = "Skorpion";
             }elseif($date >= '1123' && $date <= '1221'){
                 $this->horoscope = "Skytt";
-            }elseif($date >= '1222' && $date <= '0120'){
+            }elseif($date >= '1222' && $date <= '1231'){
+                $this->horoscope = "Stenbock";
+            }elseif($date >= '0101' && $date <= '0120'){
                 $this->horoscope = "Stenbock";
             }elseif($date >= '0121' && $date <= '0218'){
                 $this->horoscope = "Vattuman";
             }elseif($date >= '0219' && $date <= '0320'){
                 $this->horoscope = "Fisk";
             }else{
-                echo "Please enter a valid number"; 
+                $this->horoscope = false; 
             }
             
         }
         
+        
+        
         public function printSign($date){
             return $this->horoscope;
         }
-
+        public function printPic(){
+            return $this->horPic;
+        }
     }
-
+    $person = new Person($date);
 ?>
     
     
