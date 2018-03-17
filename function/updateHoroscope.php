@@ -14,11 +14,12 @@
 
         }elseif($person->horoscope !== false){
             $_SESSION["horoscope"] = $person->horoscope;
-            $_SESSION["horoscopeSet"] = 1 ;
+            $_SESSION["horoscopeSet"] = true ;
             echo "Horoscope updated";
                    
         }else{
             echo "This is not a valid date! :/"; 
+            $_SESSION["horoscopeSet"] = false;
         }
     }
 

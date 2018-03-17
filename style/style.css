@@ -3,12 +3,16 @@ body{
     margin:0;
     max-width:1028px;
     margin:auto;
-    background: url("../pic/bg.png"); 
+    background: url("../pic/bg.jpg"); 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Work Sans', sans-serif;
+}
+h1, h3{
+    color:white;
 }
 #content{
     text-align: center;
@@ -18,26 +22,52 @@ body{
     justify-content: space-around;
     display:flex;
 }
-button{
+#save{
+    color:white;
     width:150px;
     height:50px;
     border-radius: 60%;
+    background: linear-gradient(to right, black ,rgb(128, 69, 2), rgb(206, 127, 8));
+    border:none;
 }
-button:hover{
-    background-color:rgba(245, 245, 245, 0.562);
+#update{
+    color:white;
+    width:150px;
+    height:50px;
+    border-radius: 60%;
+    background: linear-gradient(to right, rgb(67, 68, 133) ,rgb(41, 3, 53), rgb(95, 1, 79));
+    border:none;
+}
+#delete{
+    color:white;
+    width:150px;
+    height:50px;
+    border-radius: 60%;
+    background: linear-gradient(to right, rgb(182, 47, 115) ,rgb(41, 3, 38), rgb(0, 0, 0));
+    border:none;
 }
 
+#update:hover{
+    background: linear-gradient(to right, rgba(67, 68, 133, 0.603) ,rgba(41, 3, 53, 0.603), rgba(95, 1, 79, 0.603));
+}
+#save:hover{
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.603) ,rgba(128, 69, 2, 0.603), rgba(206, 127, 8, 0.603));
+    
+}
+#delete:hover{
+    background: linear-gradient(to right, rgba(182, 47, 115, 0.603) ,rgba(41, 3, 38, 0.603), rgba(0, 0, 0, 0.603));
+}
 #action{
-    width:100px;
-    height:50px;
-    background-color:rgba(255, 255, 255, 0.493);
-    margin-left:45%;
-    margin-top:10px;
+    margin:auto;
+    width:130px;
+    height:80px;
+    background-color:rgba(255, 255, 255, 0.63);
+    margin-top:40px;
 }
 #horoscope{
-    width:80px;
+    margin:auto;
+    width:100px;
     height:20px;
-    margin-left:46%;
     margin-top: 10px;
-    background-color:rgba(255, 255, 255, 0.432);
+    background-color:rgba(255, 255, 255, 0.623);
 }

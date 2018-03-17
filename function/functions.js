@@ -22,7 +22,8 @@ function updateHoroscope(){
             
         },
         success: function(results){
-            viewHoroscope();
+                viewHoroscope();
+            
             $("#action").html(results);
         }
     });
