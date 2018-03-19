@@ -12,10 +12,7 @@ function addHoroscope(){
                 
             }else{
                 $("#action").html(results);
-            }
-           
-            
-            
+            }  
         }
     });
 }
@@ -32,6 +29,8 @@ function updateHoroscope(){
             if(results == true){
                 viewHoroscope();
                 $("#action").html("Horoscope updated");
+            }else if(results == false){
+                $("#action").html("Save horoscope before updating");
             }else{
                 $("#action").html(results);
             }

@@ -6,12 +6,12 @@
 
 <?php
     if($_SERVER['REQUEST_METHOD'] == 'PUT'){
-        if(!isset($_SESSION["horoscope"])){
+        if($_PUT["socialNr"] == NULL){
+            echo "Input field empty";
+
+        }elseif(!isset($_SESSION["horoscope"])){
             $check = false;
             echo $check;
-
-        }elseif($_PUT["socialNr"] == NULL){
-            echo "Input field empty";
 
         }elseif($person->horoscope !== false){
             $_SESSION["horoscope"] = $person->horoscope;
