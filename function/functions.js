@@ -6,8 +6,15 @@ function addHoroscope(){
             "socialNr": $("#socialNr").val()
         },
         success: function(results){
-            viewHoroscope();
-            $("#action").html(results);
+            if(results == true){
+                $("#action").html("Horoscope set");
+                viewHoroscope();
+                
+            }else{
+                $("#action").html(results);
+            }
+           
+            
             
         }
     });
@@ -22,9 +29,12 @@ function updateHoroscope(){
             
         },
         success: function(results){
+            if(results == true){
                 viewHoroscope();
-            
-            $("#action").html(results);
+                $("#action").html("Horoscope updated");
+            }else{
+                $("#action").html(results);
+            }
         }
     });
 }
@@ -47,9 +57,12 @@ function deleteHoroscope(){
             "personNr": $("#socialNr").val()
         },
         success: function(results){
-            viewHoroscope();
-            $("#action").html(results);
-            $("#save").show();
+            if(results == true){
+                viewHoroscope();
+                $("#action").html("Horoscope deleted");
+            }else{
+                $("#action").html("No horoscope to delete");
+            }
         }
     });
 }

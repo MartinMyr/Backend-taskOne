@@ -15,16 +15,16 @@
             ?> 
             <script type="text/javascript">alert("Horoscope " + "'<?php echo $_SESSION["horoscope"] ?>''" + " already set ")</script>
             <?php
-   
+            $check = false;
+            echo $check;
+            
         }elseif($_SESSION["horoscope"] == NULL && $person->horoscope !== false){
             $_SESSION["horoscope"] = $person->horoscope;
-            $_SESSION["horoscopeSet"] = true;
-            echo "Horoscope set";
+            $check = true;
+            echo $check;
         }else{
-
-            echo "This is not a valid date! :/";
-            $_SESSION["horoscopeSet"] = false;   
             
+            echo "This is not a valid date! :/";   
         }
         
     }

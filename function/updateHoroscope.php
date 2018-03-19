@@ -6,20 +6,20 @@
 
 <?php
     if($_SERVER['REQUEST_METHOD'] == 'PUT'){
-        if(!isset($_SESSION["horoscopeSet"])){
-            echo "No horoscope set, try saving first";
+        if(!isset($_SESSION["horoscope"])){
+            $check = false;
+            echo $check;
 
         }elseif($_PUT["socialNr"] == NULL){
             echo "Input field empty";
 
         }elseif($person->horoscope !== false){
             $_SESSION["horoscope"] = $person->horoscope;
-            $_SESSION["horoscopeSet"] = true ;
-            echo "Horoscope updated";
+            $check = true;
+            echo $check;
                    
         }else{
             echo "This is not a valid date! :/"; 
-            $_SESSION["horoscopeSet"] = false;
         }
     }
 

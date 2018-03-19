@@ -1,12 +1,15 @@
 <?php
     session_start();
     if($_SERVER['REQUEST_METHOD'] == 'DELETE'){
-        if(isset($_SESSION["horoscopeSet"])){
+        if(isset($_SESSION["horoscope"])){
             unset($_SESSION["horoscope"]);
-            unset($_SESSION["horoscopeSet"]);
-            echo "Horoscope deleted";
+
+            $check = true;
+            echo $check;
+            
         }else{
-            echo "No horoscope to delete";
+            $check = false;
+            echo $check;
         }
     }
 

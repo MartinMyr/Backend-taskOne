@@ -34,9 +34,7 @@
                 $this->horoscope = "Skorpion";
             }elseif($date >= '1123' && $date <= '1130' || $date >= '1201' && $date <= '1221'){
                 $this->horoscope = "Skytt";
-            }elseif($date >= '1222' && $date <= '1231'){
-                $this->horoscope = "Stenbock";
-            }elseif($date >= '0101' && $date <= '0120'){
+            }elseif($date >= '1222' && $date <= '1231' || $date >= '0101' && $date <= '0120' ){
                 $this->horoscope = "Stenbock";
             }elseif($date >= '0121' && $date <= '0131' || $date >= '0201' && $date <= '0218'){
                 $this->horoscope = "Vattuman";
